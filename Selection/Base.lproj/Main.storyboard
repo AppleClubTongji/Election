@@ -19,7 +19,7 @@
             </objects>
             <point key="canvasLocation" x="-1089" y="-164"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - 竞选人-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TACViewController" sceneMemberID="viewController">
@@ -31,16 +31,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZxU-tg-Abd">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZxU-tg-Abd">
                                 <rect key="frame" x="288" y="314" width="192" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192" id="IZp-dc-UDX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqv-O9-xVr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqv-O9-xVr">
                                 <rect key="frame" x="225" y="425" width="318" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="318" id="fhx-bc-OKx"/>
+                                    <constraint firstAttribute="height" constant="59" id="hJ7-Lx-Zcg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="添加">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -50,10 +57,13 @@
                                     <action selector="addPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QEf-y9-EEo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqm-Zh-qBF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqm-Zh-qBF">
                                 <rect key="frame" x="225" y="517" width="318" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="FR1-Ds-yvL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="开始投票">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,17 +73,32 @@
                                     <segue destination="0e7-CV-sd2" kind="push" id="Kgj-qT-WK8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZt-wr-03z">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZt-wr-03z">
                                 <rect key="frame" x="134" y="314" width="104" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="MmP-8E-eod"/>
+                                    <constraint firstAttribute="height" constant="26" id="m5w-hb-AIc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zqm-Zh-qBF" firstAttribute="leading" secondItem="qqv-O9-xVr" secondAttribute="leading" id="HuA-ZW-BoP"/>
+                            <constraint firstItem="ZxU-tg-Abd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LLh-EW-0Dx"/>
+                            <constraint firstItem="ZxU-tg-Abd" firstAttribute="top" secondItem="tZt-wr-03z" secondAttribute="top" id="Oae-Lm-88F"/>
+                            <constraint firstItem="qqv-O9-xVr" firstAttribute="centerX" secondItem="ZxU-tg-Abd" secondAttribute="centerX" id="Vxh-jm-mKU"/>
+                            <constraint firstItem="zqm-Zh-qBF" firstAttribute="trailing" secondItem="qqv-O9-xVr" secondAttribute="trailing" id="gLL-KO-N2Z"/>
+                            <constraint firstItem="qqv-O9-xVr" firstAttribute="top" secondItem="tZt-wr-03z" secondAttribute="bottom" constant="85" id="gQZ-Wa-yjE"/>
+                            <constraint firstItem="tZt-wr-03z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="250" id="gTZ-iE-4Yw"/>
+                            <constraint firstItem="zqm-Zh-qBF" firstAttribute="top" secondItem="qqv-O9-xVr" secondAttribute="bottom" constant="33" id="uVx-4Q-Fj3"/>
+                            <constraint firstItem="ZxU-tg-Abd" firstAttribute="leading" secondItem="tZt-wr-03z" secondAttribute="trailing" constant="50" id="x4d-Pm-B2Y"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nVi-qJ-gpR"/>
+                    <navigationItem key="navigationItem" title="竞选人" id="nVi-qJ-gpR"/>
                     <connections>
                         <outlet property="nameField" destination="ZxU-tg-Abd" id="VZ5-z3-PN3"/>
                     </connections>
@@ -82,7 +107,7 @@
             </objects>
             <point key="canvasLocation" x="-127" y="-159"/>
         </scene>
-        <!--Select View Controller-->
+        <!--Select View Controller - 投票-->
         <scene sceneID="srp-Ef-YNu">
             <objects>
                 <viewController id="0e7-CV-sd2" customClass="TACSelectViewController" sceneMemberID="viewController">
@@ -94,7 +119,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="19F-3k-MmK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="19F-3k-MmK">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="800"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -103,10 +128,14 @@
                                     <outlet property="delegate" destination="0e7-CV-sd2" id="PnO-jt-e6B"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tq9-xS-Fb1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tq9-xS-Fb1">
                                 <rect key="frame" x="225" y="888" width="318" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="318" id="7HS-cV-oKO"/>
+                                    <constraint firstAttribute="height" constant="59" id="fiM-m3-cQH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="查看结果">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -118,14 +147,22 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Tq9-xS-Fb1" secondAttribute="centerX" id="ELZ-fs-Ogs"/>
+                            <constraint firstItem="Tq9-xS-Fb1" firstAttribute="top" secondItem="19F-3k-MmK" secondAttribute="bottom" constant="88" id="F4A-xb-Mje"/>
+                            <constraint firstItem="19F-3k-MmK" firstAttribute="top" secondItem="vYf-7s-Ilt" secondAttribute="top" id="T83-oh-dTT"/>
+                            <constraint firstAttribute="trailing" secondItem="19F-3k-MmK" secondAttribute="trailing" id="ZRP-wi-V0b"/>
+                            <constraint firstItem="19F-3k-MmK" firstAttribute="leading" secondItem="vYf-7s-Ilt" secondAttribute="leading" id="j0P-5H-56f"/>
+                            <constraint firstItem="Wbp-nL-HKt" firstAttribute="top" secondItem="Tq9-xS-Fb1" secondAttribute="bottom" constant="77" id="vSf-cp-z9y"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="rgb-Er-WcO"/>
+                    <navigationItem key="navigationItem" title="投票" id="rgb-Er-WcO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuT-uf-TmX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="779" y="-159"/>
         </scene>
-        <!--Result View Controller-->
+        <!--Result View Controller - 2014年同济苹果主席竞选结果-->
         <scene sceneID="G7h-ym-VAi">
             <objects>
                 <viewController id="zii-rl-453" customClass="TACResultViewController" sceneMemberID="viewController">
@@ -137,28 +174,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geO-5L-peG">
-                                <rect key="frame" x="270" y="366" width="228" height="148"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geO-5L-peG">
+                                <rect key="frame" x="270" y="438" width="228" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="56"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="祝贺" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3B-3N-kFc">
-                                <rect key="frame" x="20" y="188" width="228" height="148"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="祝贺" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3B-3N-kFc">
+                                <rect key="frame" x="48" y="251" width="228" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="56"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="当选苹果俱乐部新一任主席" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xl-O4-a0Z">
-                                <rect key="frame" x="20" y="574" width="672" height="148"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="当选苹果俱乐部新一任主席" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xl-O4-a0Z">
+                                <rect key="frame" x="48" y="633" width="672" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="56"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="geO-5L-peG" firstAttribute="centerY" secondItem="m3B-3N-kFc" secondAttribute="centerY" constant="187" id="3Pt-Md-0a5"/>
+                            <constraint firstAttribute="centerX" secondItem="geO-5L-peG" secondAttribute="centerX" id="KDh-EJ-77u"/>
+                            <constraint firstAttribute="centerY" secondItem="geO-5L-peG" secondAttribute="centerY" id="grA-sg-rhd"/>
+                            <constraint firstAttribute="centerX" secondItem="5Xl-O4-a0Z" secondAttribute="centerX" id="moH-WR-CFr"/>
+                            <constraint firstItem="geO-5L-peG" firstAttribute="baseline" secondItem="5Xl-O4-a0Z" secondAttribute="baseline" constant="-195" id="ofW-y1-2c3"/>
+                            <constraint firstItem="geO-5L-peG" firstAttribute="centerX" secondItem="m3B-3N-kFc" secondAttribute="centerX" constant="222" id="uEE-HZ-wUm"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0JP-J2-KHI"/>
+                    <navigationItem key="navigationItem" title="2014年同济苹果主席竞选结果" id="0JP-J2-KHI"/>
                     <connections>
                         <outlet property="nameLabel" destination="geO-5L-peG" id="Sdz-WN-wOa"/>
                     </connections>

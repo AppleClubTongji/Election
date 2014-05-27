@@ -97,6 +97,7 @@
     }
     
     [self.vote setValue:origin forKey:[self.data objectAtIndex:indexPath.row]];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
