@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TACViewController : UIViewController
+@interface TACViewController : UIViewController <UIAlertViewDelegate>
 
 @end

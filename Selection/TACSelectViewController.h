@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TACSelectViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+
+@interface TACSelectViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 
 @property(strong, nonatomic) NSArray *data;
-@property(strong, nonatomic) NSMutableDictionary  *vote;
+@property(strong, nonatomic) NSMutableDictionary *vote;
 
 @end

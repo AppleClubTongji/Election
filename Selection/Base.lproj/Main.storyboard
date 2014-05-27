@@ -157,6 +157,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="投票" id="rgb-Er-WcO"/>
+                    <connections>
+                        <outlet property="tableView" destination="19F-3k-MmK" id="bwY-dl-uVz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuT-uf-TmX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

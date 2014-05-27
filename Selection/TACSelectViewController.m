@@ -11,6 +11,7 @@
 
 @interface TACSelectViewController ()
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation TACSelectViewController
@@ -88,17 +89,31 @@
 #pragma mark UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    id origin = [self.vote valueForKey:[self.data objectAtIndex:indexPath.row]];
-    if (origin == nil) {
-        origin = [NSString stringWithFormat:@"%d", 1];
-    }
-    else {
-        origin = [NSString stringWithFormat:@"%d", 1+(int)[origin integerValue]];
-    }
-    
-    [self.vote setValue:origin forKey:[self.data objectAtIndex:indexPath.row]];
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"确认"
+                                                    message:[NSString stringWithFormat:@"投一票给%@", [self.data objectAtIndex:indexPath.row]]
+                                                   delegate:self
+                                          cancelButtonTitle:@"取消"
+                                          otherButtonTitles:@"确认", nil];
+    [alert show];
+
 }
 
+#pragma mark - UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    if (buttonIndex == 1) {
+        id origin = [self.vote valueForKey:[self.data objectAtIndex:indexPath.row]];
+        if (origin == nil) {
+            origin = [NSString stringWithFormat:@"%d", 1];
+        }
+        else {
+            origin = [NSString stringWithFormat:@"%d", 1+(int)[origin integerValue]];
+        }
+        
+        [self.vote setValue:origin forKey:[self.data objectAtIndex:indexPath.row]];
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
+}
 
 @end

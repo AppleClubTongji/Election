@@ -31,7 +31,9 @@
 
 - (IBAction)addPressed:(id)sender {
     NSLog(@"%@", self.nameField.text);
-    [self.data addObject:self.nameField.text];
+//    [self.data addObject:self.nameField.text];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"确认" message:[NSString stringWithFormat:@"确认添加竞选人 %@ ?", self.nameField.text] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
+    [alert show];
 }
 
 #pragma mark - Navigation
@@ -41,5 +43,13 @@
 {
     TACSelectViewController *selectViewController = segue.destinationViewController;
     selectViewController.data = self.data;
+}
+
+#pragma mark - UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        [self.data addObject:self.nameField.text];
+    }
 }
 @end
