@@ -58,10 +58,24 @@
                 return (NSComparisonResult)NSOrderedAscending;
             return (NSComparisonResult)NSOrderedSame;
         }];
-        NSString *first = [sortedKeys objectAtIndex:0];
+        NSInteger i;
+        for (i = 0; i< self.vote.count-1; i++) {
+            if ([[self.vote valueForKey:[sortedKeys objectAtIndex:i]]integerValue] == [[self.vote valueForKey:[sortedKeys objectAtIndex:i+1]]integerValue]) {
+                
+            }
+            else{
+                break;
+            }
+        }
+        NSLog(@"%d",i);
+        NSString *result = [NSString stringWithFormat:@""];
+        for (int j = 0; j< i+1 ; j++) {
+            result = [result stringByAppendingFormat:@"%@ ",[sortedKeys objectAtIndex:j]];
+        }
+//        NSString *first = [sortedKeys objectAtIndex:0]; 
         
         TACResultViewController *resultViewController = segue.destinationViewController;
-        resultViewController.nameString = first;
+        resultViewController.nameString = result;
     }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
